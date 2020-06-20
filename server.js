@@ -6,13 +6,13 @@ console.log('这里是server')
 
 // 应用程序实例对象的get方法：接受客户端提供的GET请求并返回服务端响应结果
 // 在不是用中间件的时候，传两个参数 get(path,callback)
-// app.get('/index.html', (req, res) => {
-//     res.writeHead(200, {
-//         'Content-Type': 'text/html'
-//     })
-//     res.write('<head><meta charset="utf-8"></heade>')
-//     res.end('你好\n')
-// })
+app.get('/index.html', (req, res) => {
+    res.writeHead(200, {
+        'Content-Type': 'text/html'
+    })
+    res.write('<head><meta charset="utf-8"></heade>')
+    res.end('你好\n')
+})
 // 路由中可以使用":" + 参数名 的方式来制定一个参数,(下面的例子请求地址必须有两个参数)
 // app.get('/index.html/:id/:name', (req, res) => {
 //     var str = '';
